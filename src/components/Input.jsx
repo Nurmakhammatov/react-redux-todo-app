@@ -29,6 +29,7 @@ function Input() {
         <button
           className="btn btn-primary px-5"
           onClick={() => addTodosHandler()}
+          disabled={todoValue === ""}
         >
           Add
         </button>
