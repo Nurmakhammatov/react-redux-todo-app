@@ -16,11 +16,17 @@ function Input() {
     dispatch(addTodo(todo));
     setTodoValue("");
   };
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter") {
+      addTodosHandler();
+    }
+  };
 
   return (
     <>
       <div className="d-flex my-2 text-center">
         <input
+          onKeyDown={handleKeyPress}
           value={todoValue}
           className="form-control mx-2"
           placeholder="Add todo"
