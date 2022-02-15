@@ -13,6 +13,7 @@ function Input() {
       text: todoValue,
       completed: false,
     };
+    if (todoValue === "") return null;
     dispatch(addTodo(todo));
     setTodoValue("");
   };
